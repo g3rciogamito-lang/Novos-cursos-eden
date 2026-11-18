@@ -1,0 +1,6 @@
+{
+  "name": "Instituto Meridiano",
+  "description": "Universidade digital independente de formação profissional avançada com cursos extensos, laboratórios interactivos, biblioteca académica e certificação verificável.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

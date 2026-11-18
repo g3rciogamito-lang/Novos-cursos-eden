@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+    --navy-deep: #020B1C;
+    --navy-amoled: #030712;
+    --blue-electric: #176BFF;
+    --blue-secondary: #164E9B;
+    --surface-white: #FFFFFF;
+    --surface-soft: #F5F8FF;
+    --text-muted: #64748B;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  button, a, input, select, textarea {
+    outline-color: #176BFF;
+  }
+
+  :focus-visible {
+    outline: 2px solid #176BFF;
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Liquid glass architectural surfaces */
+.glass-navy {
+  background: rgba(2, 11, 28, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow: 0 20px 50px -20px rgba(2, 11, 28, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(22, 78, 155, 0.12);
+  box-shadow: 0 12px 36px -16px rgba(2, 11, 28, 0.08);
+}
+
+.navy-radial-glow {
+  background-color: #020B1C;
+  background-image:
+    radial-gradient(65% 60% at 78% 18%, rgba(23, 107, 255, 0.22) 0%, rgba(22, 78, 155, 0.08) 45%, transparent 75%),
+    radial-gradient(45% 45% at 15% 85%, rgba(23, 107, 255, 0.12) 0%, transparent 70%);
+}
+
+.amoled-surface {
+  background-color: #030712;
+  background-image: radial-gradient(50% 60% at 50% 0%, rgba(23, 107, 255, 0.14) 0%, transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Comfortable academic reading typography */
+.academic-prose {
+  font-size: var(--reader-font-size, 16px);
+  line-height: 1.72;
+}
